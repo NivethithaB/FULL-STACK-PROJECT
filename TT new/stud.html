@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="studstyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Student Dashboard</h2>
+        </div>
+        <div class="main-content">
+            <h1>Welcome back!</h1>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <select id="year" onchange="updateSemesters()">
+                        <option value="" disabled selected>Year</option>
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester">
+                        <option value="" disabled selected>Semester</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="" disabled selected>Department</option>
+                        <option value="cse">Computer Science and Engineering</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ece">Electronics and Communication Engineering</option>
+                        <option value="eee">Electrical and Electronics Engineering</option>
+                        <option value="mech">Mechanical Engineering</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="chem">Chemical Engineering</option>
+                        <option value="bio">Biotechnology</option>
+                    </select>
+                </div>
+                <button class="submit-btn" onclick="submitForm()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="studscripts.js"></script>
+</body>
+</html>

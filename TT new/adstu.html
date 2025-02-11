@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adstu.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul class="menu">
+                <li class="submenu">
+                    <a href="#">Student</a>
+                    <ul class="submenu-items">
+                        <li><a href="#">Students</a></li>
+                        <li><a href="#">Semester</a></li>
+                        <li><a href="#">Department</a></li>
+                        <li><a href="#">Subject name</a></li>
+                        <li><a href="#">Venue</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <select id="year" onchange="updateSemesters()">
+                        <option value="" disabled selected>Year</option>
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="" disabled selected>Department</option>
+                        <option value="cse">Computer Science and Engineering</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ece">Electronics and Communication Engineering</option>
+                        <option value="eee">Electrical and Electronics Engineering</option>
+                        <option value="mech">Mechanical Engineering</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="chem">Chemical Engineering</option>
+                        <option value="bio">Biotechnology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="students">Students</label>
+                    <input type="text" id="students" placeholder="Enter student count">
+                </div>
+                <div class="form-group">
+                    <label for="subject-name">Subject name</label>
+                    <input type="text" id="subject-name" placeholder="Enter subject name">
+                </div>
+                <div class="form-group">
+                    <label for="venue">Venue</label>
+                    <select id="venue">
+                        <option value="" disabled selected>Venue</option>
+                        <option value="A1">Block A1</option>
+                        <option value="B2">Block B2</option>
+                        <option value="C3">Block C3</option>
+                        <option value="D4">Block D4</option>
+                    </select>
+                </div>
+                <button class="submit-btn" onclick="submitForm()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="adstu.js"></script>
+</body>
+</html>
